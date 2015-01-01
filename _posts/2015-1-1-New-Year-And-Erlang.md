@@ -69,8 +69,14 @@ millions of simultaneous processes in under a second; server code can be
 upgraded, in production, without any interruption of service; and errors 
 are handled in such a way that server crashes are extremely uncommon. -- [Evan Miller](http://www.evanmiller.org/), 
 
-Above "promises" should be tested, i said to myself one month ago. It could be just those random marketing gimmick. 
+Above "promises" seems looks like much how Whats App system operates. But off-course, this should be tested, i said to myself one month ago. It could be just those random marketing gimmick. Today, all of my assertions return true for Erlang **fault tolerance**, **high availability** and **concurency** as its native platform characteristic. 
 
-Today, all of my assertions return true for Erlang **fault tolerance** and **concurency** as its native platform characteristic. 
+This is all down to how Erlang's concurrency works. It was based on message passing and the actor model. Think of people communicating with nothing but letters. 
+
+In this section i want to introduce the three primitives required for concurrency in Erlang: spawning new processes, sending messages, and receiving messages.
+
+[WIP]
 
 ## And the journey still goes on...
+
+[WIP]
