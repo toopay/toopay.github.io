@@ -46,9 +46,9 @@ The last bit syntax operation is simply assigning the integer representatiof of 
 
 ![Hello-1]({{ site.baseurl }}/images/hello-1.png)
 
-After-ward, its just a matter using `erlang:apply` as callback and converting `io` and `format` atoms with same technique described above.
+The rest should be fairly simple, as its just a matter using `erlang:apply` as callback and converting `io` and `format` atoms with same technique described above.
 
-From this point, while above obsfucated hello world code is useless, but both Erlang list comprehension and pattern matching features are dandy, and in some circumtances (well, many i found so far) is very powerfull to abstracting complex problem down to several lines of codes.
+From this point, while above obsfucated "Hello world!" code is obviously useless, but i hope its displaying simple fact that both Erlang list comprehension and pattern matching features, two main features that you'll use alot when you're developing an Erlang app, are dandy for operating many types of data (hex and bit syntax in those example). In some circumtances, it is a very powerfull way to abstracting complex problem down to just several lines of codes.
 
 ## Fault tolerance, Concurency and Hot-Code swapping
 
