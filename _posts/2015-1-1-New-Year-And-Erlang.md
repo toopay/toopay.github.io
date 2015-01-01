@@ -35,7 +35,7 @@ receive try when
 There are only 18 keywords! Thats enough for me. And as addition for being easy to learn, its also fun. ***Show me some code*** you say? A few day ago, i came across (this quiz)[http://codegolf.stackexchange.com/questions/22533/weirdest-obfuscated-hello-world?newreg=44a2bf18dcc44f7dbdddc27caf1b4ceb]. And since there is no Erlang entry on those answer list, i try to create one. The result :
 
 ```
-%% HOWTO : Compile and run `innocent:hi()`
+%% HOWTO : Compile and run (`)innocent:hi()(`)
 %% @see http://codegolf.stackexchange.com/questions/22533/weirdest-obfuscated-hello-world?newreg=44a2bf18dcc44f7dbdddc27caf1b4ceb
 -module(innocent).
 -export([hi/0]).
