@@ -8,7 +8,7 @@ permalink: /about/
 
 I'm not those type of structured person which have Evernote or Google Calendar to organize their life. So i need a place to put things i want to remember, this blog is one of them. 
 
-All contents here are written by Taufan Aditya (thats me), and if you enjoy my blogs and you want to motivate me to write more, [buy me a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XQGLBB3YAT66E).
+All contents here are written by Taufan Aditya (thats me), and if you enjoy my blog and you want to motivate me to write more, [buy me a beer](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XQGLBB3YAT66E).
 
 ### Author
 
