@@ -52,14 +52,25 @@ The rest should be fairly simple, as its just a matter using `erlang:apply` as c
 
 From this point, while above obsfucated "Hello world!" code is obviously useless, but i hope its displaying simple fact that both Erlang list comprehension and pattern matching features, two main features that you'll use alot when you're developing an Erlang app, are dandy for operating many types of data (hex and bit syntax in those example). In some circumtances, it is a very powerfull way to abstracting complex problem down to just several lines of codes.
 
-## Fault tolerance, Concurency and Hot-Code swapping
+## Fault tolerance, Hot-Code swapping and "Concurency"
 
 Ok, i must make a confession : I lie when i saying that i met Erlang by accident, similar to those one year old little girl story - which was real story if you curious. I'm actually select it based by my research in search of the ideal platform for designing real-time application.
 
 When we think about a real-time application, lets say Whats App, the system ideally **always live**, and, in term of Whats App with its 500 million users - it should handle millions active connections in matter of minutes, or even seconds. [While in 2011 they can handle 1 million active TCP connection in a single box, in 2012 they go even further to 2 millions](http://blog.whatsapp.com/196/1-million-is-so-2011). They haven't release further improvements news for 2013 and 2014 within their blog, but the 2012 data alone was more than enough to stand as testament to their decent system architecture. 
 
-How you can spawning 2 million process within one single box? What happens if one process crashes, does the other 1.999.999 processes remains operated? Also how do you handle the deployment process? Should you display "we're temporarily down" on millions connected devices? From technical perspective, thats crazy. 
+How you can spawning 2 million process within one single box? What happens if one process crashes, does the other 1.999.999 processes remains operated? Also how do you handle the deployment process? Should you display "we're temporarily down" on millions connected devices? From technical perspective, thats crazy and daunting. 
 
+Prior met Erlang, i would be nervous as hell if i must to take above responsibilities. 
 
+> If you want to keep a secret, tell it to a Swede. Born in Stockholm over 20 years ago, Erlang is the most advanced open-source server platform in 
+existence, but it seems almost no one knows about it. Erlang can handle 
+hundreds of thousands of simultaneous connections; it can spawn 
+millions of simultaneous processes in under a second; server code can be 
+upgraded, in production, without any interruption of service; and errors 
+are handled in such a way that server crashes are extremely uncommon. -- **[Evan Miller](http://www.evanmiller.org/), 
+
+Above "promises" should be tested, i said to myself one month ago. It could be just those random marketing gimmick. 
+
+Today, all of my assertions return true for Erlang **fault tolerance** and **concurency** as its native platform characteristic. 
 
 ## And the journey still goes on...
