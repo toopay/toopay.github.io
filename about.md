@@ -4,12 +4,12 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
+### Author
 
-### More Information
+Self-proclaimed software engineer for this recent 7 years. I am a pretty much regular family person with nikotin, caffeine and alcohol issue.
 
-A place to include any other types of information that you'd like to include about yourself. 
+Me and my wife launch a humble [coffee shop](https://facebook.com/jeycoffee) at 2014.
 
-### Contact me
+### Keep in touch
 
-[email@domain.com](mailto:email@domain.com)
+[toopay@taufanaditya.com](mailto:toopay@taufanaditya.com)
