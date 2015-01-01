@@ -54,6 +54,8 @@ From this point, while above obsfucated "Hello world!" code is obviously useless
 
 ## Fault tolerance, Concurency and Hot-Code swapping
 
+Ok, i must make a confession : I lie when i saying that i met Erlang by accident, similar to those one year old little girl story - which was real story if you curious. I'm actually select it based by my research in search of the ideal platform for designing real-time application.
 
+When we think about a real-time application, lets say Whats App, the system ideally **always live** ,and, in term of Whats App - it should handle millions active connections in matter of minutes, or even seconds. [While in 2011 they can handle 1 million active TCP connection in a single box, in 2012 they go even further to 2 millions](http://blog.whatsapp.com/196/1-million-is-so-2011). From technical perspective, thats crazy. 
 
 ## And the journey still goes on...
