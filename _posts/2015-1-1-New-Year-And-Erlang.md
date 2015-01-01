@@ -40,10 +40,24 @@ For those who want to know how it works, its actually very simple. First of all,
 
 {% gist facecceb90f502913de1 %}
 
-Since the quiz do not accept any string, we can exploit Hexadecimal to produce the character with the help of both Erlang [pattern matching] and [list comprehensions]. For example, we can produce `**H**` from `16#48` by bellow operation :
+Since the quiz do not accept any string, we can exploit Hexadecimal to produce the character with the help of both Erlang [pattern matching] and [list comprehensions]. 
+
+For example, we can produce `H` string from `16#48` by bellow operation :
+
+```
+[X || X <- [16#48]]
+```
+
+Which then, could be obsfucated even further using some bit syntax :
+
+```
+[X+Y+Z || <<X:8,Y:8,Z:8>> <= <<72:24>>]
+```
+As shown on bellow Erlang shell.
 
 ![Hello-1]({{ site.baseurl }}/images/hello-1.png)
 
+After-ward, its just a matter using `erlang:apply` as callback and converting `io` and `format` atoms with same technique described above.
 
 ## Fault tolerance, Concurency and Hot-Code swapping
 
