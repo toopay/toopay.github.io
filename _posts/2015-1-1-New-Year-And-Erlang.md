@@ -67,7 +67,7 @@ existence, but it seems almost no one knows about it. Erlang can handle
 hundreds of thousands of simultaneous connections; it can spawn 
 millions of simultaneous processes in under a second; server code can be 
 upgraded, in production, without any interruption of service; and errors 
-are handled in such a way that server crashes are extremely uncommon. -- **[Evan Miller](http://www.evanmiller.org/), 
+are handled in such a way that server crashes are extremely uncommon. -- [Evan Miller](http://www.evanmiller.org/), 
 
 Above "promises" should be tested, i said to myself one month ago. It could be just those random marketing gimmick. 
 
