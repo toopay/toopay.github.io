@@ -17,7 +17,7 @@ My first encounter with Erlang was pretty much the same story. As for today, i a
 
 First and foremost, i'm easy to get bored by tedious things. I prefer practice over theory, and simplicity over monolithic stuff. If i must added here, instead a collection of Mozart symfony, i only have Coldplay on my Soundcloud playlist.
 
-Same thing applied to my programming life. I'm not interested with (Lisp)[http://en.wikipedia.org/wiki/Lisp_%28programming_language%29] and i hate (Java)[https://www.facebook.com/frei.denken/posts/10203180194450253]. I'm avoid any platform that both requires me to think hard on figuring out the language construct and make it difficult for me to finding right keyword from its grammar specification. 
+Same thing applied to my programming life. I'm not interested with [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29) and i hate [Java](https://www.facebook.com/frei.denken/posts/10203180194450253). I'm avoid any platform that both requires me to think hard on figuring out the language construct and make it difficult for me to finding right keyword from its grammar specification. 
 
 So we may start with a simple question, how many keywords that Erlang have?
 
