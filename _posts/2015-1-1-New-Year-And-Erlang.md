@@ -58,4 +58,6 @@ Ok, i must make a confession : I lie when i saying that i met Erlang by accident
 
 When we think about a real-time application, lets say Whats App, the system ideally **always live** ,and, in term of Whats App - it should handle millions active connections in matter of minutes, or even seconds. [While in 2011 they can handle 1 million active TCP connection in a single box, in 2012 they go even further to 2 millions](http://blog.whatsapp.com/196/1-million-is-so-2011). From technical perspective, thats crazy. 
 
+How you can spawning 2 million process within one single box? What happens if one process crashes, does the other 1.999.999 processes remains operated? Also how do you handle the deployment process? Should you display "we're temporarily down" on millions connected devices?
+
 ## And the journey still goes on...
