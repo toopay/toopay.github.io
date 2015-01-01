@@ -1,3 +1,3 @@
 # CodingDrama.com
 
-Nothing to see here unless you're prefer to read raw markdown post go to [codingdrama.com](http://codingdrama.com/).
+Nothing to see here. Unless you're prefer to read raw markdown posts, go to [codingdrama.com](http://codingdrama.com/).
