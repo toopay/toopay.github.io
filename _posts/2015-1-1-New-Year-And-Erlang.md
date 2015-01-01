@@ -40,7 +40,9 @@ For those who want to know how it works, its actually very simple. First of all,
 
 {% gist facecceb90f502913de1 %}
 
-Since the quiz do not accept any string, we can exploit Hexadecimal to produce the character with the help of both Erlang [pattern matching] and [list comprehensions]. For example, we can produce `H` string from `16#48` by  : ```[X || X <- [16#48]]```. Which then, could be obsfucated even further using some bit syntax : ``` [X+Y+Z || <<X:8,Y:8,Z:8>> <= <<72:24>>] ```.
+Since the quiz do not accept any string, we can exploit Hexadecimal to produce the character with the help of both Erlang [pattern matching](http://erlang.org/doc/reference_manual/patterns.html) and [list comprehensions](http://www.erlang.org/doc/programming_examples/list_comprehensions.html). 
+
+For example, we can produce `H` string from `16#48` by  : ```[X || X <- [16#48]]```. Which then, could be obsfucated even further using some bit syntax : ``` [X+Y+Z || <<X:8,Y:8,Z:8>> <= <<72:24>>] ```.
 
 The last bit syntax operation is simply assigning the integer representatiof of previous hex value as 24 bit data into three 8 bit variable and concenate them together, as shown on bellow Erlang shell:
 
