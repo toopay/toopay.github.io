@@ -40,24 +40,15 @@ For those who want to know how it works, its actually very simple. First of all,
 
 {% gist facecceb90f502913de1 %}
 
-Since the quiz do not accept any string, we can exploit Hexadecimal to produce the character with the help of both Erlang [pattern matching] and [list comprehensions]. 
+Since the quiz do not accept any string, we can exploit Hexadecimal to produce the character with the help of both Erlang [pattern matching] and [list comprehensions]. For example, we can produce `H` string from `16#48` by  : ```[X || X <- [16#48]]```. Which then, could be obsfucated even further using some bit syntax : ``` [X+Y+Z || <<X:8,Y:8,Z:8>> <= <<72:24>>] ```.
 
-For example, we can produce `H` string from `16#48` by bellow operation :
-
-```
-[X || X <- [16#48]]
-```
-
-Which then, could be obsfucated even further using some bit syntax :
-
-```
-[X+Y+Z || <<X:8,Y:8,Z:8>> <= <<72:24>>]
-```
-As shown on bellow Erlang shell.
+The last bit syntax operation is simply assigning the integer representatiof of previous hex value as 24 bit data into three 8 bit variable and concenate them together, as shown on bellow Erlang shell:
 
 ![Hello-1]({{ site.baseurl }}/images/hello-1.png)
 
 After-ward, its just a matter using `erlang:apply` as callback and converting `io` and `format` atoms with same technique described above.
+
+From this point, while above obsfucated hello world code is useless, but both Erlang list comprehension and pattern matching features are dandy, and in some circumtances (well, many i found so far) is very powerfull to abstracting complex problem down to several lines of codes.
 
 ## Fault tolerance, Concurency and Hot-Code swapping
 
