@@ -34,30 +34,7 @@ receive try when
 
 There are only 18 keywords! Thats enough for me. And as addition for being easy to learn, its also fun. Show me some code you say? A few day ago, i came across (this quiz)[http://codegolf.stackexchange.com/questions/22533/weirdest-obfuscated-hello-world?newreg=44a2bf18dcc44f7dbdddc27caf1b4ceb]. And since there is no Erlang entry on those answer list, i try to create one. The result :
 
-```
--module(innocent).
--export([hi/0]).
- 
-hi() -> erlang:apply(
-	list_to_atom(
-		[A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<105:24>> ]] 
-		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ]]),
-	list_to_atom(
-		[A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<102:24>> ]] 
-		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ]]
-		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<114:24>> ]] 
-		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<109:24>> ]]
-		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<97:24>> ]] 
-		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<116:24>> ]]),
-	[[Mua || Mua <- lists:reverse(lists:foldl(fun(D,E) -> [[K] || K <- E] ++ [[M] || M <- D] end, 
-[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<33:24>> ], 
-[[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<100:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<108:24>> ], 
-[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<114:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ], 
-[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<119:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<32:24>> ], 
-[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<108:24>> ], 
-[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<108:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<101:24>> ], 
-[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<72:24>> ]]),[])]]).
-```
+{% gist ae540adeea470bfb05f5 %}
 
 
 ## Fault tolerance, Concurency and Hot-Code swapping
