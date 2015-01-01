@@ -11,17 +11,19 @@ Since i have two days for new year frenzied, i think its maybe a good time to st
 
 There is a little girl. She's one year old. And this morning, when she wake up, she saw a thing, which was latter become her favourite amongst other stuff in her naive childhoold life. She never see this item before, even adults around her use it in daily basis without her being noticed. There is a light - so many lights, go around this small item, which projecting many images. And surprisingly, it also generate many different sounds too. She was amazed, and reach it eagerly to investigate. It was her parent smartphone, that apparently her mom forgot to keep it safely last night. Her life is never be the same ever since then.
 
-My first encounter with Erlang was pretty much the same story. As for today, i already wrote roughly 3K LOC of Erlang, building my first OTP application, yet, this Excelent (with big "E") platform still surprised me in the way that none of my previous programming language(s) did! There are several key points i'm about to share, in my very beginning journey of Erlang world.
+My first encounter with Erlang was pretty much the same story. As for today, i already wrote roughly 2K LOC of Erlang, building my first OTP application, yet, this Excelent (with big "E") platform still surprised me in the way that none of my previous programming language(s) did! There are several key points i'm about to share, in my very beginning journey of Erlang world.
 
 > **DISCLAIMER** If you are a language fanatic, you might not enjoy to reading further as it may contains my random ramblings upon your worshiped language. Instead, you might go straight to [this entertaining site](http://www.catsthatlooklikehitler.com/cgi-bin/seigmiaow.pl).
 
-## Its an easy to learn language!
+## Its an easy to learn Language!
 
-First and foremost, i'm easy to get bored by tedious things. I prefer practice over theory, and simplicity over monolithic stuff. If i must added here, instead a collection of Mozart symfony, i only have Coldplay on my Soundcloud playlist.
+As a person, i'm easy to get bored by tedious things. I prefer simplicity over monolithic stuff, and if i must added here, instead a collection of Mozart symfony, i only have Coldplay on my Soundcloud playlist.
 
-Same thing applied to my programming life. I'm not interested with [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29) and i hate [Java](https://www.facebook.com/frei.denken/posts/10203180194450253). I porting my OpenCV random stuff from C into [Python](https://github.com/toopay/area51) and i'd once wrote [Markdwon editor](https://github.com/toopay/bootstrap-markdown) - a very simple one - in favor of using bloated editor that available in that time. 
+Same thing applied to my programming life. I was porting my OpenCV experiments from C into [Python](https://github.com/toopay/area51) and i'd once wrote [Markdwon editor](https://github.com/toopay/bootstrap-markdown) - a very simple one - in favor of using bloated editor that available in that time.
 
-I'm avoid any platform that both requires me to think hard on figuring out the language construct and make it difficult for me to finding right keyword from its grammar specification. So we may start with a simple question, how many keywords that Erlang have?
+I'm not interested with [Lisp](http://en.wikipedia.org/wiki/Lisp_%28programming_language%29) and i hate [Java](https://www.facebook.com/frei.denken/posts/10203180194450253). I'm avoid any platform that both requires me to think hard on figuring out the language construct and make it difficult for me to finding right keyword from its grammar specification. 
+
+So first and foremost, we may start with a simple question, how many keywords that Erlang have?
 
 ```
 after apply attributes call case
@@ -30,4 +32,37 @@ let letrec module of primop
 receive try when
 ```
 
-There are only 18 keywords! Good sign.
+There are only 18 keywords! Thats enough for me. And as addition for being easy to learn, its also fun. ***Show me some code*** you say? A few day ago, i came across (this quiz)[http://codegolf.stackexchange.com/questions/22533/weirdest-obfuscated-hello-world?newreg=44a2bf18dcc44f7dbdddc27caf1b4ceb]. And since there is no Erlang entry on those answer list, i try to create one. The result :
+```
+%% HOWTO : Compile and run `innocent:hi()`
+%% @see http://codegolf.stackexchange.com/questions/22533/weirdest-obfuscated-hello-world?newreg=44a2bf18dcc44f7dbdddc27caf1b4ceb
+-module(innocent).
+-export([hi/0]).
+ 
+hi() -> erlang:apply(
+	list_to_atom(
+		[A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<105:24>> ]] 
+		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ]]),
+	list_to_atom(
+		[A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<102:24>> ]] 
+		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ]]
+		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<114:24>> ]] 
+		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<109:24>> ]]
+		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<97:24>> ]] 
+		++ [A || A <- [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<116:24>> ]]),
+	[[Mua || Mua <- lists:reverse(lists:foldl(fun(D,E) -> [[K] || K <- E] ++ [[M] || M <- D] end, 
+[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<33:24>> ], 
+[[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<100:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<108:24>> ], 
+[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<114:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ], 
+[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<119:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<32:24>> ], 
+[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<111:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<108:24>> ], 
+[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<108:24>> ], [ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<101:24>> ], 
+[ Mua + Ha + Haa || <<Mua:8, Ha:8, Haa:8>> <= <<72:24>> ]]),[])]]).
+```
+
+
+## Fault tolerance, Concurency and Hot-Code swapping
+
+
+
+## And the journey still goes on...
