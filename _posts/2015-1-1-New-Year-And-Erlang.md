@@ -56,7 +56,7 @@ From this point, while above obsfucated "Hello world!" code is obviously useless
 
 There is a nice video in this very topic you probably interesting to watch :
 
-{% youtube rRbY3TMUcgQ %}
+<iframe width="500" height="400" src="http://www.youtube.com/embed/rRbY3TMUcgQ?color=white&theme=light"></iframe>
 
 Ok, i must make a confession : I lie when i saying that i met Erlang by accident, similar to those one year old little girl story - which was real story if you curious. I'm actually select it based by my research in search of the ideal platform for designing real-time application.
 
