@@ -125,7 +125,7 @@ For this tasks, Erlang provides both [release_handler](http://www.erlang.org/doc
 
 ## And the journey still goes on...
 
-Right now, this second, while we take a single breath, many things actually also happens. The Venus is completing 7/8 from its sun orbit motion. There is supernova in our near galaxy. There is a new planet, somewhere. Coldplay prepare to release their new album. Some random people just throwed up from drinking bad vodka. And so on. Think about that, i know you probably don't care right now, but any sane people that still have curiosity (well, not limited to but including, You : any self-proclaimed software engineer) in their mind, should also questioning the same.
+Right now, this second, while we take a single breath, many things actually also happens. The Venus is completing 7/8 from its sun orbit motion. There is supernova in our near galaxy. There is a new planet, somewhere. Coldplay prepare to release their new album. Some random people just throwed up from drinking bad vodka. And so on. Think about that, i know you probably don't care right now, but any sane people that still have curiosity (well, not limited to but including You : any self-proclaimed software engineer) in their mind, should also questioning the same.
 
 Within a month i realize that i often underestimate how things works, not excluded (especially) in programming. Erlang give me a new insight, an interesting one, about how things works. 
 
