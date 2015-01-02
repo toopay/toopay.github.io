@@ -130,3 +130,14 @@ Right now, this second, while we take a single breath, many things actually also
 Within a month i realize that i often underestimate how things works, not excluded (especially) in programming. Erlang give me a new insight, an interesting one, about how things works. 
 
 So for 2015, I will enjoy spending this whole year diving more deep to Erlang. As i digest more Erlang books or articles, I will try to share my experiments in this blog, probably roll out some new oper-source library. I'll continue to building my OTP application that utilize awesome community libraries, just to mention a few : [ejabberd](https://github.com/processone/ejabberd), [ranch](https://github.com/ninenines/ranch) and [riak](https://github.com/basho/riak). I know when i get stuck, and [throw a question to the community](http://stackoverflow.com/questions/27229185/riak-data-types-and-search), the community will gladly help. FYI, they are surprisingly very warm and cheerful, also if i must added here : had a good sense of humor. If a community around your language are nothing but either language elitist nor those people who spend most of their time talking about framework/language war, you probably want to try Erlang and mingle with their community. Its not so large, but for sure it the most fine i found so far. And if you do so, you off course will found me, with the smile of a curious little one year old girl bringing her new amazing toy everywhere she go.
+
+***
+
+References :
+* http://www.erlang.org/doc/
+* http://en.wikipedia.org/
+* http://learnyousomeerlang.com/
+* http://ninenines.eu/articles/
+* http://www.chicagoboss.org/tutorial.pdf
+* https://www.youtube.com/watch?v=6p21O7ZGyD8
+* https://www.youtube.com/watch?v=rRbY3TMUcgQ
