@@ -54,10 +54,6 @@ From this point, while above obsfucated "Hello world!" code is obviously useless
 
 ## "Concurency", Fault tolerance and Hot-Code swapping
 
-There is a nice video in this very topic you probably interesting to watch :
-
-<iframe width="500" height="400" src="http://www.youtube.com/embed/rRbY3TMUcgQ?color=white&theme=light"></iframe>
-
 Ok, i must make a confession : I lie when i saying that i met Erlang by accident, similar to those one year old little girl story - which was real story if you curious. I'm actually select it based by my research in search of the ideal platform for designing real-time application.
 
 When we think about a real-time application, lets say Whats App, the system ideally **always live**, and, in term of Whats App with its 500 million users - it should handle millions active connections in matter of minutes, or even seconds. [While in 2011 they can handle 1 million active TCP connection in a single box, in 2012 they go even further to 2 millions](http://blog.whatsapp.com/196/1-million-is-so-2011). They haven't release further improvements news for 2013 and 2014 within their blog, but the 2012 data alone was more than enough to stand as testament to their decent system architecture. 
@@ -126,6 +122,10 @@ Back to our three primitive operations above: spawning, receive and sending a me
 We're only have one more question left. Is it possible to introduce patch to running system, without interupting the whole service? An Erlang **release** is a set of OTP **applications** or **libraries** deployed and running together. To become a no-downtime release, we should be able to swap between two releases, the current running release and one prepared and loaded, a f**kin' [Hot Code Swapping](http://en.wikipedia.org/wiki/Hot_swapping). 
 
 For this tasks, Erlang provides both [release_handler](http://www.erlang.org/doc/man/release_handler.html) and [systools](http://www.erlang.org/doc/man/systools.html). They are peculiar, and lil bit hard to use. Fortunately for me (and any other Erlang newcomer), there is [relx](https://github.com/erlware/relx) that does away with all of those tedious work. Performing hot code swapping are a matter of (1) preparing an OTP that listen for upgrade event, (2) bumping up the version and make new release via `relx release relup tar`, then (3) calling `upgrade <new_version>` from our previous release binary. A piece of cake.
+
+There is a video that you probably interesting to watch. Its actually conclude both this section and previous one, all in a nice parody.
+
+<iframe width="500" height="400" src="http://www.youtube.com/embed/rRbY3TMUcgQ?color=white&theme=light"></iframe>
 
 ## And the journey still goes on...
 
