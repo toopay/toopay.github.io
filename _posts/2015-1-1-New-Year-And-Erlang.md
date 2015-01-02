@@ -81,7 +81,9 @@ Now we can start sending the message.
 
 ![Hello-2]({{ site.baseurl }}/images/hello-2.png)
 
-Whats we just did was basically 2 things. First, we use Erlang `spawn/3` to spawn above module function. The result `<0.41.0>` is called process identifier, often just written `Pid` variable by the community. Each things in Erlang (seriously) is simply a process. Even the erlang shell itself is a process. When we send `{self(), <args>}` to the `pint/0` function, we basically just sent the Erlang shell process identifier which get echoed back to its mailbox.
+Whats we just did was basically 2 things. First, we use Erlang `spawn/3` to spawn above module function. Second we passing a message through those ***actor***. 
+
+The result of `spawn/3` `<0.41.0>` is called process identifier, often just written `Pid` variable by the community. Each things in Erlang (seriously) is simply a process. Even the erlang shell itself is a process. When we send `{self(), <args>}` to the `pint/0` function, we basically just sent the Erlang shell process identifier which get echoed back to its mailbox.
 
 ![Hello-3]({{ site.baseurl }}/images/hello-3.png)
 
