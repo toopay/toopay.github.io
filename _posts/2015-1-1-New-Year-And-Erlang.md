@@ -138,6 +138,7 @@ So for 2015, I will enjoy spending this whole year diving more deep to Erlang. A
 ***
 
 References :
+
 * http://www.erlang.org/doc/
 * http://en.wikipedia.org/
 * http://learnyousomeerlang.com/
