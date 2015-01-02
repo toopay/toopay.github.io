@@ -81,15 +81,15 @@ Now we can start sending the message.
 
 ![Hello-2]({{ site.baseurl }}/images/hello-2.png)
 
-Whats we just did was basically 2 things. First, we use Erlang `spawn/3` to spawn above module function. Second we passing a message through those ***actor***. 
+Whats we just did were basically 2 things. First, we use Erlang `spawn/3` to spawn above module function. Second we passing a message through those ***actor***. 
 
-The result of `spawn/3` `<0.41.0>` is called process identifier, often just written `Pid` by the community. Each thing in Erlang (seriously) is simply a process. Even the erlang shell itself is a process! So when we send `{self(), <args>}` to the `pint/0` function from within Erlang shell, we basically just sent its process identifier (which get echoed back to its mailbox by our `pint/0` function).
+The result of `spawn/3` above, `<0.41.0>`, is called process identifier, often just written `Pid` by the community. Each thing in Erlang (seriously) is simply a process. Even the erlang shell itself is a process! So when we send `{self(), <args>}` to the `pint/0` function from within Erlang shell, we basically just sent its process identifier (which get echoed back to its mailbox by our `pint/0` function).
 
 ![Hello-3]({{ site.baseurl }}/images/hello-3.png)
 
 When we `flush/0` the IO buffer, we can see that previous received messages are correctly processing by our module.
 
-From this very simple demonstration, we can actually grasp the underlying reason of why Erlang can scale better than any other platform : because users would be represented as processes which only reacted upon certain events (i.e.: receiving a call, hanging up, etc.). An ideal system would support processes doing small computations,  and too make it efficient, it plausible for processes to be started very quickly, to be destroyed very quickly and to be able to switch them really fast. How fast?
+From this very simple demonstration, we can actually grasp the underlying reason of why Erlang can scale better than any other platform : because users would be represented as processes which only reacted upon certain events (i.e.: receiving a call, hanging up, etc.). An ideal system would support processes doing small computations,  and too make it efficient, its plausible for processes to be started very quickly, to be destroyed very quickly and to be able to switch them really fast. How fast?
 
 Lets put more challange to this Swede. Here we try to spawn 10 processes that will echoed any integer argument that passed to it. The argument ranging from 1 to 10, as showed bellow : 
 
@@ -99,9 +99,9 @@ And the execution generates interesting output :
 
 ![Hello-4]({{ site.baseurl }}/images/hello-4.png)
 
-First, it not showing us the sequential result. The order of the output doesn't make sense, you said. Welcome to parallelism. Because the processes are running at the same time, the ordering of events isn't guaranteed anymore. That's because the Erlang VM uses many tricks to decide when to run a process or another one, making sure each gets a good share of time.
+First, it not showing us the sequential result. The order of the output doesn't make sense, you said. Welcome to parallelism. Because the processes are running at the same time, the ordering of events isn't guaranteed anymore. That's because the Erlang VM uses many tricks to decide when to run a process or another one, making sure each gets a good share of time. Erlang teach me that [lock](http://en.wikipedia.org/wiki/Lock_%28computer_science%29) isn't good for real-time system, and our design should avoid it in any costs.
 
-Secondly it shows us that it took only 45 milliseconds to spawn all of those 10 process. If 10 processes sounds too small for you, i'm also felt same way. So lets try to spawn a million processes. I supress the IO output that echoing the integer values, and heres the result :
+Secondly it shows us that it took only 45 milliseconds to spawn all of those 10 process. If 10 processes sounds too small for you, i'm also felt the same way. So lets get crazy and try to spawn a million processes! I supress the IO output that echoing the integer values, and heres the result :
 
 ![Hello-5]({{ site.baseurl }}/images/hello-5.png)
 
@@ -109,7 +109,7 @@ It was only took roughly 5 seconds for Erlang to both spawning each of those 1 m
 
 ![Hello-6]({{ site.baseurl }}/images/hello-6.png)
 
-Its show that Erlang uses `222,2%` of our processor. For no-brainer like me, thats a shocking result. How it could supersede `100%` of my available processor? Well, off-course except that i'm completely forgot that i have quad-core processor. Welcome to the multi-core programming!
+Its show that Erlang uses `222,2%` of our processor. For no-brainer like me, thats a shocking result. How it could supersede `100%` of my available processor? Thats doesn't make sense (i hear you). Well, off-course except that we're apparently completely forgot that we had quad-core processor nowaday. Welcome to the multi-core programming!
 
 I also found some history from this lesson. Many programmers hold the belief that Erlang was ready for multi-core computers years before it actually was. Erlang was only adapted to true [symmetric multiprocessing](http://en.wikipedia.org/wiki/Symmetric_multiprocessing) (SMP) in the mid 2000s. Before that, SMP often had to be disabled to avoid performance losses. To get parallelism on a multicore computer without SMP, you'd start many instances of the VM instead. Erlang was only got most of the implementation right with the R13B release of the language in 2009.  An interesting fact is that because Erlang concurrency is all about isolated processes, it took no conceptual change at the language level to bring true parallelism to the language. All the changes were transparently done in the VM, away from the eyes of the programmers.
 
