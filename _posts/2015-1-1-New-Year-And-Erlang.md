@@ -71,11 +71,19 @@ are handled in such a way that server crashes are extremely uncommon. -- [Evan M
 
 Above "promises" seems looks like much how Whats App system operates. But off-course, this should be tested, i said to myself one month ago. It could be just those random marketing gimmick. Today, all of my assertions return true for Erlang **fault tolerance**, **high availability** and **concurency** as its native platform characteristic. 
 
-This is all down to how Erlang's concurrency works. It was based on message passing and the actor model. Think of people communicating with nothing but letters. 
+This is all down to how Erlang's concurrency works. It was based on message passing and the actor model. Think of people communicating with nothing but letters. In this section i want to introduce the three primitives required for concurrency in Erlang: spawning new processes, sending messages, and receiving messages.
 
-In this section i want to introduce the three primitives required for concurrency in Erlang: spawning new processes, sending messages, and receiving messages.
+So lets start with a simple module that will spawn a new process and listen for any received message.
 
-[WIP]
+{% gist b925e97a24b8099b979b %}
+
+Now we can start sending the message.
+
+![Hello-2]({{ site.baseurl }}/images/hello-2.png)
+
+Whats we just did was basically 2 things. First, we use Erlang `spawn/3` to spawn above module function. The result `<0.41.0>` is called process identifier, often just written `Pid` variable by the community. Each things in Erlang (seriously) is simply a process. Even the erlang shell itself is a process. When we send `{self(), <args>}` to the `pint/0` function, we basically just sent the Erlang shell process identifier which get echoed back to its mailbox.
+
+![Hello-3]({{ site.baseurl }}/images/hello-3.png)
 
 ## And the journey still goes on...
 
