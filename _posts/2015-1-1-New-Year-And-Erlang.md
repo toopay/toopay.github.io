@@ -52,7 +52,7 @@ The rest should be fairly simple, as its just a matter using `erlang:apply` as c
 
 From this point, while above obsfucated "Hello world!" code is obviously useless, but i hope its displaying simple fact that both Erlang list comprehension and pattern matching features, two main features that you'll use alot when you're developing an Erlang app, are dandy for operating many types of data (hex and bit syntax in those example). In some circumtances, it is a very powerfull way to abstracting complex problem down to just several lines of codes.
 
-## Fault tolerance, Hot-Code swapping and "Concurency"
+## "Concurency", Fault tolerance and Hot-Code swapping
 
 Ok, i must make a confession : I lie when i saying that i met Erlang by accident, similar to those one year old little girl story - which was real story if you curious. I'm actually select it based by my research in search of the ideal platform for designing real-time application.
 
@@ -113,7 +113,9 @@ Its show that Erlang uses `222,2%` of our processor. For no-brainer like me, tha
 
 I also found some history from this lesson. Many programmers hold the belief that Erlang was ready for multi-core computers years before it actually was. Erlang was only adapted to true [symmetric multiprocessing](http://en.wikipedia.org/wiki/Symmetric_multiprocessing) (SMP) in the mid 2000s. Before that, SMP often had to be disabled to avoid performance losses. To get parallelism on a multicore computer without SMP, you'd start many instances of the VM instead. Erlang was only got most of the implementation right with the R13B release of the language in 2009.  An interesting fact is that because Erlang concurrency is all about isolated processes, it took no conceptual change at the language level to bring true parallelism to the language. All the changes were transparently done in the VM, away from the eyes of the programmers.
 
+Now we know, at its heart, how concurency works on Erlang. But our assertions is not complete yet until we also sure that we can handle any failure within our concurent process, and be able to upgrade our code without any interuption, right?
 
+Back to our three primitive operations above: spawning, receive and sending a message from within a process, Erlang also allow us to **linking** and **monitoring** each process. Together, and with **naming processes** register, we could than assemble a process **supervisor**. In higher level perspective, Erlang supervisor is like Pharaoh while our millions processes is his worker, that works hard building the pyramids and mega tombs. When a worker (process) do not behave like he should, Pharaoh will hang it in public (to avoid more missbehave worker), and replace it with similar worker.
 
 ## And the journey still goes on...
 
