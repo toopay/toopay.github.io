@@ -123,7 +123,7 @@ We're only have one more question left. Is it possible to introduce patch to run
 
 An Erlang **release** is a set of OTP **applications** or **libraries** deployed and running together. To become a no-downtime release, we should be able to swap between two releases, the current running release and one prepared and loaded, a f**kin' [Hot Code Swapping](http://en.wikipedia.org/wiki/Hot_swapping).
 
-For this tasks, Erlang provides both [release_handler](http://www.erlang.org/doc/man/release_handler.html) and [systools](http://www.erlang.org/doc/man/systools.html). They are peculiar, and lil bit hard to use. Fortunately for me (and any other Erlang newcomer), there is [relx](https://github.com/erlware/relx) that does away with all of those tedious work. Performing hot code swapping are a matter of (1) preparing an OTP that listen for upgrade event, (2) bumping up the version and make new release via `relx release relup tar`, then calling `upgrade <new_version>` from our previous release binary. A piece of cake.
+For this tasks, Erlang provides both [release_handler](http://www.erlang.org/doc/man/release_handler.html) and [systools](http://www.erlang.org/doc/man/systools.html). They are peculiar, and lil bit hard to use. Fortunately for me (and any other Erlang newcomer), there is [relx](https://github.com/erlware/relx) that does away with all of those tedious work. Performing hot code swapping are a matter of (1) preparing an OTP that listen for upgrade event, (2) bumping up the version and make new release via `relx release relup tar`, then (3) calling `upgrade <new_version>` from our previous release binary. A piece of cake.
 
 ## And the journey still goes on...
 
