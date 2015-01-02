@@ -109,8 +109,9 @@ It was only took roughly 5 seconds for Erlang to both spawning each of those 1 m
 
 ![Hello-6]({{ site.baseurl }}/images/hello-6.png)
 
+Its show that Erlang uses `222,2%` of our processor. For no-brainer like me, thats a shocking result. How it could supersede `100%` of my available processor? Well, off-course except that i'm completely forgot that i have quad-core processor. Welcome to the multi-core programming!
 
-[spawn(fun() -> G(X) end) || X <- lists:seq(1,10)].
+I also found some history from this lesson. Many programmers hold the belief that Erlang was ready for multi-core computers years before it actually was. Erlang was only adapted to true [symmetric multiprocessing](http://en.wikipedia.org/wiki/Symmetric_multiprocessing) (SMP) in the mid 2000s. Before that, SMP often had to be disabled to avoid performance losses. To get parallelism on a multicore computer without SMP, you'd start many instances of the VM instead. Erlang was adapted to true symmetric multiprocessing in the mid 2000s and only got most of the implementation right with the R13B release of the language in 2009.  An interesting fact is that because Erlang concurrency is all about isolated processes, it took no conceptual change at the language level to bring true parallelism to the language. All the changes were transparently done in the VM, away from the eyes of the programmers.
 
 
 
