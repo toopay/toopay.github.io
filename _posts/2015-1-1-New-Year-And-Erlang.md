@@ -115,7 +115,15 @@ I also found some history from this lesson. Many programmers hold the belief tha
 
 Now we know, at its heart, how concurency works on Erlang. But our assertions is not complete yet until we also sure that we can handle any failure within our concurent process, and be able to upgrade our code without any interuption, right?
 
-Back to our three primitive operations above: spawning, receive and sending a message from within a process, Erlang also allow us to **linking** and **monitoring** each process. Together, and with **naming processes** register, we could than assemble a process **supervisor**. In higher level perspective, Erlang supervisor is like Pharaoh while our millions processes is his worker, that works hard building the pyramids and mega tombs. When a worker (process) do not behave like he should, Pharaoh will hang it in public (to avoid more missbehave worker), and replace it with similar worker.
+The first writers of Erlang always kept in mind that failure is common. You can try to prevent bugs all you want, but most of the time some of them will still happen. In the eventuality bugs don't happen, nothing can stop hardware failures all the time. The idea is thus to find good ways to handle errors and problems rather than trying to prevent them all.
+
+Back to our three primitive operations above: spawning, receive and sending a message from within a process, Erlang also allow us to **linking** and **monitoring** each process. [Together](http://www.erlang.org/doc/reference_manual/processes.html), and with **naming processes** register, we could than assemble a process **supervisor**. In higher level perspective, Erlang supervisor is like Pharaoh while our millions processes is his worker, that works hard building the pyramids and mega tombs. When a worker (process) do not behave like he should, Pharaoh will hang it in public (to avoid more missbehave worker), and replace it with similar worker. Thats how cruel Egypt golder empire were once live in mankind history.
+
+We're only have one more question left. Is it possible to introduce patch to running system, without interupting the whole service?
+
+An Erlang **release** is a set of OTP **applications** or **libraries** deployed and running together. To become a no-downtime release, we should be able to swap between two releases, the current running release and one prepared and loaded, a f**kin' [Hot Code Swapping](http://en.wikipedia.org/wiki/Hot_swapping).
+
+For this tasks, Erlang provides both [release_handler](http://www.erlang.org/doc/man/release_handler.html) and [systools](http://www.erlang.org/doc/man/systools.html). They are peculiar, and lil bit hard to use. Fortunately for my (and any other Erlang newcomer), there is [relx](https://github.com/erlware/relx) that does away with all of those tedious work. Performing hot code swapping are a matter of (1) preparing an OTP that listen for upgrade event, (2) bumping up the version and make new release via `relx release relup tar`, then calling `upgrade <new_version>` from our previous release binary. A piece of cake.
 
 ## And the journey still goes on...
 
