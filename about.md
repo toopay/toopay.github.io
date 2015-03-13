@@ -12,7 +12,7 @@ All contents here are written by Taufan Aditya (thats me), and if you enjoy my b
 
 ### Author
 
-Self-proclaimed software engineer for this recent 7 years. I am a pretty much regular family person with nikotin, caffeine and alcohol issue.
+Self-proclaimed software engineer for this recent 7 years. I am a pretty much regular family person with ~~nikotin~~ , caffeine and alcohol issue.
 
 Me and my wife launch a humble [coffee shop](https://facebook.com/jeycoffee) at 2014, which perhaps the most notable achievement i had as an entrepreneur.
 
