@@ -12,7 +12,7 @@ All contents here are written by Taufan Aditya (thats me), and if you enjoy my b
 
 ### Author
 
-Self-proclaimed software engineer for this recent 8 years. I am a pretty much regular family person with nikotin , caffeine and alcohol issue.
+Self-proclaimed software engineer for this recent 8 years. I am a pretty much regular family person with nikotin, caffeine and alcohol issue.
 
 I'am a co-founder of [BixBox](https://get.bixboxapp.com) and [Refactory](https://refactory.id)
 
