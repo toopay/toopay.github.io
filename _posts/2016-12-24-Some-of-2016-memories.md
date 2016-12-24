@@ -3,7 +3,7 @@ layout: post
 title: Some of 2016 memories.
 ---
 
-![Zaahira sister, Mika]({{ site.baseurl }}/images/2014/4.jpg "Zaahira sister, Mika")
+![Zaahira sister, Mika]({{ site.baseurl }}/images/2016/4.jpg "Zaahira sister, Mika")
 
 <!-- more -->
 
